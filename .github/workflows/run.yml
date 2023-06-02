@@ -3,9 +3,9 @@ on:
     # supplies a button in gh for manual running
     workflow_dispatch:
     schedule:
-        - cron:  '*/5 * * * *'
-#         - cron:  '*/10 * * * *'
-#         - cron:  '*/0 0 * * 0' # supposed to work at midnight on Sunday weekly
+        - cron:  '*/0 0 * * *' # midnight every day
+#         - cron:  '*/10 * * * *' # every 10'
+#         - cron:  '*/0 0 * * 0' # midnight on Sunday weekly
 
 # lets gh change files
 permissions: write-all
