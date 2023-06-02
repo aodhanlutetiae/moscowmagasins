@@ -1,9 +1,10 @@
 on:
     push:
-    # supplies a buttong in gh for manual running
+    # supplies a button in gh for manual running
     workflow_dispatch:
     schedule:
-        - cron:  '*/10 * * * *'
+        - cron:  '*/5 * * * *'
+#         - cron:  '*/10 * * * *'
 #         - cron:  '*/0 0 * * 0' # supposed to work at midnight on Sunday weekly
 
 # lets gh change files
@@ -17,7 +18,8 @@ jobs:
             - uses: actions/checkout@v3
             - uses: actions/setup-python@v4
             # run and assign to a file called data
-            - run: python start.py > data.json
+#             - run: python start.py > data.json
+            - run: python start.py > $(date +%Y%m%d-%H%M%S).json
             # add the data to our repository
             - run: |-
                   git config user.name 'GitHub Actions'
