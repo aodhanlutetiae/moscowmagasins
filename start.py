@@ -1,34 +1,3 @@
-# import http.client
-
-# conn = http.client.HTTPSConnection("services.chanel.com")
-
-# payload = "division%5B%5D=1&division%5B%5D=2&division%5B%5D=5&division%5B%5D=3&productline%5B%5D=1&productline%5B%5D=2&productline%5B%5D=3&productline%5B%5D=4&productline%5B%5D=26&productline%5B%5D=5&productline%5B%5D=18&productline%5B%5D=19&productline%5B%5D=25&productline%5B%5D=10&productline%5B%5D=14&productline%5B%5D=13&productline%5B%5D=12&geocodeResults=%5B%7B%22address_components%22%3A%5B%7B%22long_name%22%3A%22Moscow%22%2C%22short_name%22%3A%22Moscow%22%2C%22types%22%3A%5B%22locality%22%2C%22political%22%5D%7D%2C%7B%22long_name%22%3A%22Moscow%22%2C%22short_name%22%3A%22Moscow%22%2C%22types%22%3A%5B%22administrative_area_level_2%22%2C%22political%22%5D%7D%2C%7B%22long_name%22%3A%22Moscow%22%2C%22short_name%22%3A%22Moscow%22%2C%22types%22%3A%5B%22administrative_area_level_1%22%2C%22political%22%5D%7D%2C%7B%22long_name%22%3A%22Russia%22%2C%22short_name%22%3A%22RU%22%2C%22types%22%3A%5B%22country%22%2C%22political%22%5D%7D%5D%2C%22formatted_address%22%3A%22Moscow%2C%20Russia%22%2C%22geometry%22%3A%7B%22bounds%22%3A%7B%22south%22%3A55.142591%2C%22west%22%3A36.8032249%2C%22north%22%3A56.0214609%2C%22east%22%3A37.9678221%7D%2C%22location%22%3A%7B%22lat%22%3A55.755826%2C%22lng%22%3A37.6173%7D%2C%22location_type%22%3A%22APPROXIMATE%22%2C%22viewport%22%3A%7B%22south%22%3A55.142591%2C%22west%22%3A36.8032249%2C%22north%22%3A56.0214609%2C%22east%22%3A37.9678221%7D%7D%2C%22place_id%22%3A%22ChIJybDUc_xKtUYRTM9XV8zWRD0%22%2C%22types%22%3A%5B%22locality%22%2C%22political%22%5D%7D%5D&iframe=true&logo=false&one_analytics=us&radius=4.8"
-
-# headers = {
-# #     'cookie': "country=BE; AKA_A2=A; bm_sz=8205D4A4AEE21E24F6146DD98ED3A880~YAAQEeJIFzp0Mm2IAQAAKM86fBOSMas%2BU3uqWgbgMWBdWzEkd5RzQWiFxVgC%2F5obTpVVwM2RTrDFi%2BF%2BAkdGFWGI7LxMdGzf1f4oJljG2V%2FvGYAg6uX%2F6hodY%2FSG9ZQhtAI0TWEVHXaH6whUmThRSqH2FSdK0R%2FmLxkRVDuMpZ5blEtIbpuFEO5jiHj6B3R8QKq1o89qPE4NWw9sPcc1EXiRTBXxor5FLOu9xgQ58PbjfaONvmUAGZXaxL4fxDkgrzzfJYZl2auauw%2FTth9wie7cexT8mRs2tIrSrT978YVHgls%3D~3749688~3425842; mt.sc=%257B%2522i%2522%253A1685711409356%252C%2522d%2522%253A%255B%255D%257D; mt.v=2.1393567679.1685711409356; _cs_mk_ga=0.01938434976139347_1685711409416; _gid=GA1.2.1608592982.1685711409; _gcl_au=1.1.1808809877.1685711410; cookieDCM=1685711409.tatkyqef; tfpsi=2ef387bb-e7db-4ae0-a3f1-bb9fb764e870; _abck=8F970241B3B3D5648240109787CF6809~0~YAAQEeJIF0R0Mm2IAQAA8NI6fAlinYyM56pKQ2AFq2ABrpjmY%2FpgApPu9RRGIOTPZtimxbN3QcTMkwJvjchiMukoQegPzMgRIDlkIsUjp4P47g2ujcaUdIYl41m5oVNtm4%2F%2Flz0ZXjpFvISgYcbguR4gyeOZs7113VwcKWauAGfMpUUojNkm60oAWcGidIN2WZWIl2GdhaVRNfn7%2BlXtiiLGDYpxSiy0e6WQ%2B4L9iUJ47RGUzXpZJJ7LVPzI5QYEbyyN5Or25uInMCE0eL%2FAkgosVjZWGjjIxwhp7dw%2FeGfxyxNEK3hTSBDyIXnIE%2BOx4CFqHJkoYV5t094I6JDDcBo2Ky3AkHYSQ7tEhIwWZMQZQXvplJqhDHthiDorSQ4Gj09e7wOv9wFQenibcqUKO6Qr%2BCXlx3Bx~-1~%7C%7C-1%7C%7C~-1; ak_bmsc=E3F28E02B34522FFA5CCC1F4ADB75B86~000000000000000000000000000000~YAAQEeJIF0V0Mm2IAQAAFtM6fBPvy1dNH75xm5MAdo3YZoZgW2bmQe5n21GwubjlSkc1bPnPb7swiyrL8fK8RnHD0R7n%2BKhqr46Y1k5FCQxuvLo9DVUS0xUSV1UMVUZ75Us0TqPaaTLWxIzOj6DlAtrIDGy9k%2BYUPk7OznXr0qa2NE1hItK4TYE%2BHy5tb2OPN6bAsqM9skXOYKNVOxB3Gwm0geNZiNqCauH63xCd9AuIqKoeZLgl4i6YdpMfBo%2B14RN0P%2BxdXYRfBKvo5RQkkETFAkpzknHgmbIgYW9Y6D8z7d61koRfJZLNvUrD4ZgGZ6PjLQ8niRhMdH%2Bn%2FkH5lCGJ3ov5u68Gn1gARTTahAAP9ew%2FMU%2Fh5xSeIWR7%2Bux3OhuT3Etazdy%2Fvw3aj6D7mMKN6AQ484aLaNgwhLUHwWgleEQ1RMc3w4crduGo%2BD4Z7XirZ34fwT9tLyDRU9nMHQsDdnhqVcUFFw%2FdzyHk%2BRPTi7nqZx7KBAuGWQ%3D%3D; ORAPERSIST=; _cs_c=0; _fbp=fb.1.1685711410468.1435632586; ORA_FPC=id%3D5782408c-7bfc-4f5f-a77c-e649ba7ae870; _mibhv=anon-1685711410500-9753833511_3869; _ga_B8MDEW4HHJ=GS1.1.1685711409.1.1.1685711468.0.0.0; _ga=GA1.2.1468021121.1685711409; OptanonConsent=isGpcEnabled%3D0%26datestamp%3DFri%2BJun%2B02%2B2023%2B15%253A11%253A09%2BGMT%252B0200%2B(Central%2BEuropean%2BSummer%2BTime)%26version%3D6.36.0%26isIABGlobal%3Dfalse%26hosts%3D%26consentId%3Df3ed4dd3-1468-4301-a874-40392152f015%26interactionCount%3D1%26landingPath%3Dhttps%253A%252F%252Fwww.chanel.com%252Fus%252Fstorelocator%252F%26groups%3D1%253A1%252C2%253A1%252C3%253A1%252C4%253A1; mp_chanel_usa_mixpanel=%257B%2522distinct_id%2522%253A%2520%25221887c3ad428972-0868d45cc8e73a-1b525634-13c680-1887c3ad4291d31%2522%252C%2522bc_persist_updated%2522%253A%25201685711410218%257D; mp_dev_mixpanel=%257B%2522distinct_id%2522%253A%2520%25221887c3adba11aa-06a777df967ca3-1b525634-13c680-1887c3adba2290c%2522%252C%2522bc_persist_updated%2522%253A%25201685711412131%257D; _cs_id=b772878d-c87f-aa15-c53e-c95971ad1363.1685711410.1.1685711472.1685711410.1.1719875410296; _cs_s=5.0.0.1685713272793; AWSALB=v039N5p63ILsYP%2BSZqKmNvvHK3HQBUDSNOFx4xiCmimJa1ITVuUwqZCzDXdSTYvK3ZMt9DkbVWZKTXzY%2BrV0b3RaRWEprEODHs17YXd9fX8KUv5IRKrdBr8lCrRi; AWSALBCORS=v039N5p63ILsYP%2BSZqKmNvvHK3HQBUDSNOFx4xiCmimJa1ITVuUwqZCzDXdSTYvK3ZMt9DkbVWZKTXzY%2BrV0b3RaRWEprEODHs17YXd9fX8KUv5IRKrdBr8lCrRi; bm_sv=9ADA14CAD051AB3C1A6BF3FBF9FD3DB2~YAAQvMURAgsOU2%2BIAQAAxco7fBPICVfFnkDMhhiXPxnVRhxCJB%2BXQsHxwS6D0%2FAoowz%2B%2FrADO59nqEjr%2BJKAbrBB1da2fUwC2dA5QUFPfOgOHz0kadKZDCSVfnVFPI76eoCKDBpJIVHp4MX54ikKwLXyl1VrOZlxckIV64yF0jZlqg4GrfG2NT%2FihFLIPEE5s%2B8QxOz7jGioNsiW3r4NQbrY9ViSKN4SOrfezBiRXfnXdt6QunVJ4DKsWNU5thDjbQ%3D%3D~1",
-# #     'authority': "services.chanel.com",
-# #     'accept': "*/*",
-# #     'accept-language': "en-GB,en-US;q=0.9,en;q=0.8",
-#     'content-type': "application/x-www-form-urlencoded; charset=UTF-8",
-# #     'origin': "https://services.chanel.com",
-# #     'referer': "https://services.chanel.com/en_US/storelocator/crp/search/moscow%2C+russia/?division%5B%5D=1&productline%5B%5D=1&productline%5B%5D=2&productline%5B%5D=3&productline%5B%5D=4&productline%5B%5D=26&division%5B%5D=2&productline%5B%5D=5&division%5B%5D=5&productline%5B%5D=18&productline%5B%5D=19&productline%5B%5D=25&division%5B%5D=3&productline%5B%5D=10&productline%5B%5D=14&productline%5B%5D=13&productline%5B%5D=12&lang=en-US&iframe=true&logo=false&one_analytics=us",
-# #     'sec-ch-ua': ""Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"",
-# #     'sec-ch-ua-mobile': "?0",
-# #     'sec-ch-ua-platform': ""macOS"",
-# #     'sec-fetch-dest': "empty",
-# #     'sec-fetch-mode': "cors",
-# #     'sec-fetch-site': "same-origin",
-# #     'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
-#     'x-requested-with': "XMLHttpRequest"
-#     }
-
-# conn.request("POST", "/en_US/storelocator/getStoreList", payload, headers)
-
-# res = conn.getresponse()
-# data = res.read()
-
-# print(data.decode("utf-8"))
-
 import http.client
 
 conn = http.client.HTTPSConnection("services.chanel.com")
