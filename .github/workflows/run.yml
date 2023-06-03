@@ -4,7 +4,8 @@ on:
     workflow_dispatch:
     schedule:
 #         - cron:  '*/0 0 * * *' # midnight every day FAILS
-        - cron:  '*/60 * * * *' # every 60'
+#         - cron:  '*/60 * * * *' # every 60'
+        - cron:  '*/0 6 * * *' # 8am CET daily
 #         - cron:  '*/0 0 * * 0' # midnight on Sunday weekly
 
 # lets gh change files
