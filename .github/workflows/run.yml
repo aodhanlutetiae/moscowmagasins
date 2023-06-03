@@ -3,8 +3,8 @@ on:
     # supplies a button in gh for manual running
     workflow_dispatch:
     schedule:
-        - cron:  '*/0 0 * * *' # midnight every day
-#         - cron:  '*/10 * * * *' # every 10'
+#         - cron:  '*/0 0 * * *' # midnight every day FAILS
+        - cron:  '*/60 * * * *' # every 60'
 #         - cron:  '*/0 0 * * 0' # midnight on Sunday weekly
 
 # lets gh change files
