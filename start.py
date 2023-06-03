@@ -42,7 +42,7 @@ headers = {
 #     'Accept-Language': "en-GB,en;q=0.5",
 #     'Accept-Encoding': "gzip, deflate, br",
     'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8",
-    'X-Requested-With': "XMLHttpRequest",
+    'X-Requested-With': "XMLHttpRequest"
 #     'Origin': "https://services.chanel.com",
 #     'Connection': "keep-alive",
 #     'Referer': "https://services.chanel.com/en_US/storelocator/crp/search/moscow%2C+russia/?division%5B%5D=1&productline%5B%5D=1&productline%5B%5D=2&productline%5B%5D=3&productline%5B%5D=4&productline%5B%5D=26&division%5B%5D=2&productline%5B%5D=5&division%5B%5D=5&productline%5B%5D=18&productline%5B%5D=19&productline%5B%5D=25&division%5B%5D=3&productline%5B%5D=10&productline%5B%5D=14&productline%5B%5D=13&productline%5B%5D=12&chanel-only=1&lang=en-US&iframe=true&logo=false&one_analytics=us",
