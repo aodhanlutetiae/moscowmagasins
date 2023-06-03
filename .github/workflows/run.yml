@@ -5,8 +5,18 @@ on:
     schedule:
 #         - cron:  '*/0 0 * * *' # midnight every day FAILS
 #         - cron:  '*/60 * * * *' # every 60'
-        - cron:  '*/0 6 * * *' # 8am CET daily
+        - cron:  '* 6 * * *' # 8am CET daily
 #         - cron:  '*/0 0 * * 0' # midnight on Sunday weekly
+
+
+on:
+    push:
+    workflow_dispatch:
+    schedule:
+        - cron:  '*/10 * * * *'
+
+
+
 
 # lets gh change files
 permissions: write-all
