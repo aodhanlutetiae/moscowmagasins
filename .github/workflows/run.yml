@@ -20,7 +20,7 @@ jobs:
             - uses: actions/setup-python@v4
             # run and assign to a file called data
 #             - run: python start.py > data.json
-            - run: python start.py > /data/$(date +%Y%m%d-%H%M%S).json
+            - run: python start.py > data/$(date +%Y%m%d-%H%M%S).json
             # add the data to our repository
             - run: |-
                   git config user.name 'GitHub Actions'
