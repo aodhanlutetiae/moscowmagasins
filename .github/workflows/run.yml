@@ -3,10 +3,7 @@ on:
     # supplies a button in gh for manual running
     workflow_dispatch:
     schedule:
-        # - cron:  '* 6 * * *' # 6AM daily. Works but x6 or 7
-#         - cron:  '*/0 0 * * *' # midnight every day FAILS
-        - cron:  '0 0 * * 0' # every week? 
-#         - cron:  '*/0 0 * * 0' # midnight on Sunday weekly
+        - cron:  '0 0 * * 0' # every week 
 
 # lets gh change files
 permissions: write-all
@@ -19,7 +16,7 @@ jobs:
             - uses: actions/checkout@v3
             - uses: actions/setup-python@v4
             # run and assign to a file called data
-#             - run: python start.py > data.json
+            # run: python start.py > data.json
             - run: python start.py > data/$(date +%Y%m%d-%H%M%S).json
             # add the data to our repository
             - run: |-
